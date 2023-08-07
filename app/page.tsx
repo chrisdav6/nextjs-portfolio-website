@@ -1,5 +1,5 @@
 const Home = () => {
-  return <main className=''>Portfolio</main>;
+  return <main className=''></main>;
 };
 
 export default Home;
