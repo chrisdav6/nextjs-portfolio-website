@@ -1,5 +1,6 @@
 import About from '@/components/About';
 import Intro from '@/components/Intro';
+import Projects from '@/components/Projects';
 import SectionDivider from '@/components/SectionDivider';
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Intro />
       <SectionDivider />
       <About />
+      <Projects />
     </main>
   );
 };

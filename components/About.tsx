@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import SectionHeading from './SectionHeading';
+import SectionHeading from '@/components/SectionHeading';
 
 const About = () => {
   return (
