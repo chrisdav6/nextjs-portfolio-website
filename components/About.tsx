@@ -6,7 +6,7 @@ import SectionHeading from '@/components/SectionHeading';
 import { useActiveSectionContext } from '@/context/active-section-context';
 
 const About = () => {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({ threshold: 0.75 });
   const { setActiveSection } = useActiveSectionContext();
 
   useEffect(() => {
