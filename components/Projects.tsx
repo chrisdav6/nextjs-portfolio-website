@@ -5,7 +5,7 @@ import { projectsData } from '@/lib/data';
 
 const Projects = () => {
   return (
-    <section id='projects'>
+    <section id='projects' className='scroll-mt-28'>
       <SectionHeading text='My Projects' />
 
       <div>
