@@ -50,7 +50,7 @@ const Contact = () => {
           name='message'
           placeholder='Your Message'
           required
-          maxLength={500}
+          maxLength={5000}
         />
         <button
           type='submit'
