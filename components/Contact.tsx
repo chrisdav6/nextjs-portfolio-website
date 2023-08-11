@@ -1,12 +1,19 @@
 'use client';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
 import SectionHeading from './SectionHeading';
 import { sendEmail } from '@/actions/sendEmail';
 import SubmitBtn from './SubmitBtn';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
   const { ref } = useSectionInView('Contact');
+
+  //Keeping track of form values to clear them after submission
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   return (
     <motion.section
@@ -34,7 +41,19 @@ const Contact = () => {
       <form
         className='flex flex-col mt-10'
         action={async (formData) => {
-          await sendEmail(formData);
+          const { data, error } = await sendEmail(formData);
+
+          if (error) {
+            toast.error(error);
+            return;
+          }
+
+          toast.success('Email sent successfully!');
+
+          //Clear form values
+          setName('');
+          setEmail('');
+          setMessage('');
         }}
       >
         <input
@@ -44,6 +63,8 @@ const Contact = () => {
           placeholder='Your Name'
           required
           maxLength={500}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
         <input
           type='email'
@@ -52,6 +73,8 @@ const Contact = () => {
           placeholder='Your Email'
           required
           maxLength={500}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
           className='h-52 my-3 rounded-lg border border-black/10 p-4'
@@ -59,6 +82,8 @@ const Contact = () => {
           placeholder='Your Message'
           required
           maxLength={5000}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
         <SubmitBtn />
       </form>
