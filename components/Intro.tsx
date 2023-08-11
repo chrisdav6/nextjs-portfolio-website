@@ -84,7 +84,7 @@ const Intro = () => {
         <a
           href='/CV.pdf'
           download
-          className='group flex items-center gap-2 bg-white px-7 py-3 rounded-full outline-none border border-black/10 active:scale-105 hover:scale-110 transition'
+          className='group flex items-center gap-2 bg-white px-7 py-3 rounded-full outline-none border border-black/10 active:scale-105 hover:scale-110 transition dark:bg-white/10'
         >
           Download CV
           <HiDownload className='opacity-60 group-hover:translate-y-1 transition' />
@@ -93,7 +93,7 @@ const Intro = () => {
         <a
           href='https://linkedin.com'
           target='_blank'
-          className='bg-white text-gray-700 p-4 rounded-full outline-none border border-black/10 active:scale-105 hover:scale-[1.15] hover:text-gray-950 transition'
+          className='bg-white text-gray-700 p-4 rounded-full outline-none border border-black/10 active:scale-105 hover:scale-[1.15] hover:text-gray-950 transition dark:bg-white/10 dark:text-white/60'
         >
           <BsLinkedin />
         </a>
@@ -101,7 +101,7 @@ const Intro = () => {
         <a
           href='https://github.com/chrisdav6'
           target='_blank'
-          className='bg-white text-gray-700 p-4 rounded-full text-[1.35rem] outline-none border border-black/10 active:scale-105 hover:scale-[1.15] hover:text-gray-950 transition'
+          className='bg-white text-gray-700 p-4 rounded-full text-[1.35rem] outline-none border border-black/10 active:scale-105 hover:scale-[1.15] hover:text-gray-950 transition dark:bg-white/10 dark:text-white/60'
         >
           <FaGithubSquare />
         </a>
