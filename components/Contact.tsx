@@ -27,7 +27,7 @@ const Contact = () => {
     >
       <SectionHeading text='Contact Me' />
 
-      <p className='text-gray-700 -mt-5'>
+      <p className='text-gray-700 -mt-5 dark:text-white/80'>
         Please contact me directly at{' '}
         <a
           className='underline'
@@ -39,7 +39,7 @@ const Contact = () => {
       </p>
 
       <form
-        className='flex flex-col mt-10'
+        className='flex flex-col mt-10 dark:text-black'
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -59,7 +59,7 @@ const Contact = () => {
         <input
           type='text'
           name='senderName'
-          className='h-14 rounded-lg border border-black/10 px-4'
+          className='h-14 rounded-lg border border-black/10 px-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 dark:outline-none transition-all'
           placeholder='Your Name'
           required
           maxLength={500}
@@ -69,7 +69,7 @@ const Contact = () => {
         <input
           type='email'
           name='senderEmail'
-          className='h-14 mt-3 rounded-lg border border-black/10 px-4'
+          className='h-14 mt-3 rounded-lg border border-black/10 px-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 dark:outline-none transition-all'
           placeholder='Your Email'
           required
           maxLength={500}
@@ -77,7 +77,7 @@ const Contact = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
-          className='h-52 my-3 rounded-lg border border-black/10 p-4'
+          className='h-52 my-3 rounded-lg border border-black/10 p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 dark:outline-none transition-all'
           name='message'
           placeholder='Your Message'
           required
