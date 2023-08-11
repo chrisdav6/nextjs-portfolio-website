@@ -38,9 +38,17 @@ const Contact = () => {
         }}
       >
         <input
+          type='text'
+          name='senderName'
+          className='h-14 rounded-lg border border-black/10 px-4'
+          placeholder='Your Name'
+          required
+          maxLength={500}
+        />
+        <input
           type='email'
           name='senderEmail'
-          className='h-14 rounded-lg border border-black/10 px-4'
+          className='h-14 mt-3 rounded-lg border border-black/10 px-4'
           placeholder='Your Email'
           required
           maxLength={500}
